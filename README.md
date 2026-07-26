@@ -127,28 +127,6 @@ Copy:
 
 ---
 
-# Configuration
-
-After running the commands the wizard will ask you to enter the cre:
-
-Add:
-
-```env
-SUPABASE_URL=your_project_url
-
-SUPABASE_KEY=your_anon_key
-```
-
-Example:
-
-```env
-SUPABASE_URL=https://example.supabase.co
-
-SUPABASE_KEY=your_key_here
-```
-
----
-
 # Commands
 
 ## Start Application

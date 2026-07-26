@@ -1,17 +1,10 @@
 <div align="center">
 
-# ✦ Manjun's Sequence ✦
-
-### Made by Dhurgesh Maloth
+### ✦ Made by Dhurgesh Maloth ✦
 
 **Concept • Research • Architecture • Design • Engineering • Development • Implementation**
 
----
-
-A powerful CLI project generator that automates project setup, configuration, and initialization.
-
 </div>
-
 ---
 
 # Manjun's Sequence
@@ -458,12 +451,9 @@ MIT License
 
 ---
 
-<div align="center">
+## Disclaimer
 
-## Made with ❤️ by Dhurgesh Maloth
+This extension is not affiliated with Instagram or Google. Use it responsibly and in accordance with the platform’s terms and your local laws.
 
-**Manjun's Sequence**
+Copyright © 2026 Manjun - Dhurgesh
 
-Automating project setup, one command at a time.
-
-</div>

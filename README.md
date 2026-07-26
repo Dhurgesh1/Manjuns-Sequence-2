@@ -129,11 +129,7 @@ Copy:
 
 # Configuration
 
-Create a file named:
-
-```
-.env
-```
+After running the commands the wizard will ask you to enter the cre:
 
 Add:
 

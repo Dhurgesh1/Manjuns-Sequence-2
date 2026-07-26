@@ -12,23 +12,39 @@
 
 Manjun's Sequence is a CLI tool that helps automate project setup and configuration.
 
+It provides an interactive terminal workflow to create, configure, and initialize projects quickly.
+
 ---
 
-## Requirements
+# Requirements
 
-Install the following before using Manjun's Sequence:
+Before installing Manjun's Sequence, make sure you have:
 
 - Node.js (v18 or above)
 - npm
 
-Check installation:
+Check Node.js installation:
 
 ```bash
 node -v
 ```
 
+Example:
+
+```
+v18.20.4
+```
+
+Check npm installation:
+
 ```bash
 npm -v
+```
+
+Example:
+
+```
+10.7.0
 ```
 
 ---
@@ -41,10 +57,22 @@ Install Manjun's Sequence globally:
 npm install -g manjun-sequence
 ```
 
-Check if it is installed:
+After installation:
+
+```
+added packages successfully
+```
+
+Check if installation was successful:
 
 ```bash
 manjun --version
+```
+
+Example:
+
+```
+1.0.0
 ```
 
 ---
@@ -57,7 +85,48 @@ Start the CLI:
 manjun
 ```
 
-Follow the instructions shown in the terminal.
+The setup wizard will open:
+
+```
+✦ Manjun's Sequence ✦
+
+Welcome to Manjun's Sequence
+
+? Enter project name:
+```
+
+Enter your project name:
+
+Example:
+
+```
+my-project
+```
+
+Press:
+
+```
+ENTER
+```
+
+---
+
+# Setup Process
+
+Manjun's Sequence will guide you through the configuration.
+
+Example:
+
+```
+? Project name: my-project
+
+? Database provider:
+> Supabase
+
+? Enter Supabase URL:
+
+? Enter Supabase Key:
+```
 
 ---
 
@@ -67,37 +136,64 @@ Manjun's Sequence uses Supabase for database storage.
 
 ## 1. Create Supabase Account
 
-Go to:
+Visit:
 
+```
 https://supabase.com
+```
 
 Create an account and login.
 
 ---
 
-## 2. Create a Project
+## 2. Create a Supabase Project
 
-1. Click **New Project**
-2. Enter project name
+Inside the Supabase dashboard:
+
+1. Click:
+
+```
+New Project
+```
+
+2. Enter project details:
+
+```
+Project Name:
+manjun-project
+```
+
 3. Create a database password
+
 4. Select a region
-5. Click **Create Project**
+
+5. Click:
+
+```
+Create Project
+```
 
 Wait until the project is ready.
 
 ---
 
-## 3. Create Database Table
+# Creating Database Table
 
 Open:
 
 ```
 Supabase Dashboard
-→ SQL Editor
-→ New Query
+
+↓
+
+SQL Editor
+
+↓
+
+New Query
 ```
 
-Run:
+Paste the following SQL:
 
 ```sql
 create table projects (
@@ -108,32 +204,207 @@ create table projects (
 );
 ```
 
+Click:
+
+```
+Run
+```
+
+Successful output:
+
+```
+Success.
+No rows returned
+```
+
 ---
 
-# Supabase Credentials
+# Getting Supabase Credentials
 
-Open:
+Go to:
 
 ```
 Supabase Dashboard
-→ Settings
-→ API
+
+↓
+
+Settings
+
+↓
+
+API
 ```
 
 Copy:
 
-- Project URL
-- Anon Public Key
+```
+Project URL
+```
+
+and:
+
+```
+anon public key
+```
+
+Example:
+
+```
+Project URL:
+
+https://example.supabase.co
+
+
+Anon Key:
+
+eyJhbGciOiJIUzI1Ni...
+```
+
+---
+
+# Adding Supabase Credentials
+
+Run:
+
+```bash
+manjun
+```
+
+The CLI will ask:
+
+```
+Enter Supabase URL:
+```
+
+Paste your URL:
+
+```
+https://example.supabase.co
+```
+
+Press:
+
+```
+ENTER
+```
+
+Next:
+
+```
+Enter Supabase Key:
+```
+
+Paste your anon public key.
+
+Press:
+
+```
+ENTER
+```
+
+---
+
+# Connection Result
+
+If everything is correct:
+
+```
+✔ Supabase connected
+
+✔ Database verified
+
+✔ Configuration completed
+
+✔ Project created successfully
+```
+
+---
+
+# Generated Project
+
+After setup completes, a new folder will be created.
+
+Example:
+
+```
+my-project/
+
+├── src/
+
+├── package.json
+
+├── .env
+
+├── README.md
+
+└── project files
+```
+
+The folder is created in the same location where you ran:
+
+```bash
+manjun
+```
+
+Example:
+
+If you run:
+
+```
+C:\Users\Dhurgesh\Desktop
+```
+
+Your project will be created:
+
+```
+C:\Users\Dhurgesh\Desktop\my-project
+```
+
+---
+
+# Opening Your Project
+
+Move into the project:
+
+```bash
+cd my-project
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run your project:
+
+```bash
+npm start
+```
+
+Example:
+
+```
+Starting project...
+
+✔ Environment loaded
+
+✔ Dependencies ready
+
+✔ Application running
+```
 
 ---
 
 # Commands
 
-## Start Application
+## Start CLI
 
 ```bash
 manjun
 ```
+
+---
 
 ## Check Version
 
@@ -141,23 +412,45 @@ manjun
 manjun --version
 ```
 
+Example:
+
+```
+1.0.0
+```
+
+---
+
 ## Show Help
 
 ```bash
 manjun --help
 ```
 
+Example:
+
+```
+Usage:
+
+manjun [command]
+
+Commands:
+
+setup
+start
+help
+```
+
 ---
 
 # Development Setup
 
-Clone the repository:
+Clone repository:
 
 ```bash
 git clone <repository-url>
 ```
 
-Open the folder:
+Open folder:
 
 ```bash
 cd manjun-sequence
@@ -169,7 +462,7 @@ Install dependencies:
 npm install
 ```
 
-Run:
+Run development version:
 
 ```bash
 npm start
@@ -179,34 +472,43 @@ npm start
 
 # Troubleshooting
 
-## Command not found
+## Manjun command not found
 
-Reinstall:
+Remove the old installation:
 
 ```bash
 npm uninstall -g manjun-sequence
 ```
 
+Install again:
+
 ```bash
 npm install -g manjun-sequence
 ```
 
+Restart your terminal.
+
 ---
 
-## Supabase Connection Error
+## Supabase Connection Failed
 
 Check:
 
-- `.env` file exists
-- Supabase URL is correct
+- Supabase project is active
+- URL is correct
 - API key is correct
 - Database table exists
+- Internet connection works
 
 ---
 
-## Security
+# Security
 
-- Do not share your Supabase keys
-- Do not upload `.env` to GitHub
-- Keep credentials private
+- Never share your Supabase credentials
+- Never upload `.env` files
+- Keep API keys private
+- Use secure environment variables
+
+---
+
 Copyright © 2026 Dhurgesh Maloth

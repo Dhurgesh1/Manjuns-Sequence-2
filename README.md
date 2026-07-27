@@ -29,6 +29,12 @@ Before installing Manjun's Sequence, make sure you have:
 - Node.js **v18 or later**
 - npm
 
+Download node.js
+
+```bash
+winget install OpenJS.NodeJS.LTS
+```
+
 Check your Node.js version:
 
 ```bash
